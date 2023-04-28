@@ -23,6 +23,6 @@ The Windows version of NBTExplorer 2.0 can still be used if the Mac version does
 Mono runtime, and then run NBTExplorer 2.0 with Mono from the command line.
 
 ## Downloads
-* Windows : []()
-* Linux : []()
-* Mac : []()
+* Windows : [NBTExplorer-2.0-2.8.0.msi](https://github.com/foxypiratecove37350/NBTExplorer-2.0/releases/download/v2.8.0-win/NBTExplorer-2.0-2.8.0.msi)
+* Linux : [none](https://github.com/foxypiratecove37350/NBTExplorer-2.0)
+* Mac : [none](https://github.com/foxypiratecove37350/NBTExplorer-2.0)
