@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NBTExplorer</RootNamespace>
-    <AssemblyName>NBTExplorer</AssemblyName>
+    <AssemblyName>NBTExplorer 2.0</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>dead_bush.ico</ApplicationIcon>
+    <ApplicationIcon>icon-nbtexplorer-2.0.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>True</DebugSymbols>
@@ -104,6 +104,12 @@
     <Compile Include="Interop.cs" />
     <Compile Include="Vendor\MultiSelectTreeView\MultiSelectTreeview.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\CancelSearchForm.cs">
       <SubType>Form</SubType>
@@ -225,6 +231,9 @@
     <Compile Include="Windows\WatermarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Windows\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\CancelSearchForm.resx">
       <DependentUpon>CancelSearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,13 +295,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dead_bush.ico" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\arrow-090.png" />
     <None Include="Resources\arrow-270.png" />
+    <Content Include="icon-nbtexplorer-2.0.ico" />
+    <None Include="Resources\settings.png" />
     <Content Include="Windows\NBTExplorer.visualelementsmanifest.xml" />
     <Content Include="Vendor\Be.Windows.Forms.HexBox\HexBox.bmp" />
   </ItemGroup>

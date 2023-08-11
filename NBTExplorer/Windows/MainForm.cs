@@ -861,6 +861,11 @@ namespace NBTExplorer.Windows
             new About().ShowDialog();
         }
 
+        private void _menuItemSettings_Click(object sender, EventArgs e)
+        {
+            new SettingsForm().ShowDialog();
+        }
+
         private void _menuItemRecentPaths_Click (object sender, EventArgs e)
         {
             ToolStripMenuItem item = sender as ToolStripMenuItem;

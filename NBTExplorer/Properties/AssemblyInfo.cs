@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NBTExplorer")]
-[assembly: AssemblyDescription("Graphical editor for most NBT data sources.  NBT is used by Minecraft.")]
+[assembly: AssemblyTitle("NBTExplorer 2.0")]
+[assembly: AssemblyDescription("Graphical editor for most NBT data sources.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("foxy pirate cove / Fnaf (commonly know as foxy corp of foxy pirate corp)")]
 [assembly: AssemblyProduct("NBTExplorer")]
-[assembly: AssemblyCopyright("Copyright © Justin Aquadro 2011-2017")]
+[assembly: AssemblyCopyright("©2022-2023 foxy pirate cove / Fnaf - Copyright © Justin Aquadro 2011-2017 for the base.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
