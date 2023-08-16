@@ -1,6 +1,6 @@
 # NBTExplorer 2.0
 
-NBTExplorer 2.0 is an open-source NBT editor for all common sources of NBT data.  It's mainly intended for editing [Minecraft](https://www.minecraft.net) game data.
+NBTExplorer 2.0 is an open-source NBT editor for all common sources of NBT data.
 
 ## Supported Formats
 
