@@ -135,7 +135,7 @@
             this.imageList1.Images.SetKeyName(6, "edit-code.png");
             this.imageList1.Images.SetKeyName(7, "edit-small-caps.png");
             this.imageList1.Images.SetKeyName(8, "edit-list.png");
-            this.imageList1.Images.SetKeyName(9, "box.png");
+            this.imageList1.Images.SetKeyName(9, "box.ico");
             this.imageList1.Images.SetKeyName(10, "folder.png");
             this.imageList1.Images.SetKeyName(11, "block.png");
             this.imageList1.Images.SetKeyName(12, "wooden-box.png");
@@ -608,6 +608,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindReplace";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Find and Replace";
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

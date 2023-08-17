@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CancelSearchForm));
             this._buttonCancel = new System.Windows.Forms.Button();
             this._searchPathLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -58,9 +59,12 @@
             this.Controls.Add(this._searchPathLabel);
             this.Controls.Add(this._buttonCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CancelSearchForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Searching...";
             this.ResumeLayout(false);
 

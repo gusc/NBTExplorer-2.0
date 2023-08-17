@@ -27,14 +27,13 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HexEditor));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this._buttonCancel = new System.Windows.Forms.Button();
             this._buttonOK = new System.Windows.Forms.Button();
             this._buttonImport = new System.Windows.Forms.Button();
             this._buttonExport = new System.Windows.Forms.Button();
             this.viewTabs = new System.Windows.Forms.TabControl();
-            this.statusStrip1.SuspendLayout();
-            this.viewTabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -108,12 +107,12 @@
             this.Controls.Add(this._buttonOK);
             this.Controls.Add(this.statusStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HexEditor";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "HexEditor";
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.viewTabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

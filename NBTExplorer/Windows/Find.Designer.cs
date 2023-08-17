@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Find));
             this._cbName = new System.Windows.Forms.CheckBox();
             this._cbValue = new System.Windows.Forms.CheckBox();
             this._textName = new System.Windows.Forms.TextBox();
@@ -112,9 +113,12 @@
             this.Controls.Add(this._cbValue);
             this.Controls.Add(this._cbName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Find";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Find";
             this.ResumeLayout(false);
             this.PerformLayout();

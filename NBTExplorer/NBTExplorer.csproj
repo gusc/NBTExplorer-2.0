@@ -102,6 +102,11 @@
     <Compile Include="Controllers\NodeTreeController.cs" />
     <Compile Include="Controllers\RuleTreeController.cs" />
     <Compile Include="Interop.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vendor\MultiSelectTreeView\MultiSelectTreeview.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -270,14 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Vendor\Be.Windows.Forms.HexBox\HexBox.resx">
       <DependentUpon>HexBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,10 +299,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resources\arrow-090.png" />
-    <None Include="Resources\arrow-270.png" />
     <Content Include="icon-nbtexplorer-2.0.ico" />
-    <None Include="Resources\settings.png" />
     <Content Include="Windows\NBTExplorer.visualelementsmanifest.xml" />
     <Content Include="Vendor\Be.Windows.Forms.HexBox\HexBox.bmp" />
   </ItemGroup>
@@ -323,6 +320,9 @@
       <Project>{20d7cba3-5b6d-40b0-8d28-4c9a58e4ffbc}</Project>
       <Name>NBTModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

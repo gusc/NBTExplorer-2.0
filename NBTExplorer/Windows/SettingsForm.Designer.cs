@@ -29,27 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.settingTabControl = new System.Windows.Forms.TabControl();
             this.generalSettingTabPage = new System.Windows.Forms.TabPage();
             this.graphicsSettingsTabPage = new System.Windows.Forms.TabPage();
             this.settingTabControl.SuspendLayout();
-            this.generalSettingTabPage.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(178, 19);
-            this.linkLabel1.Location = new System.Drawing.Point(3, 3);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(399, 422);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = 
-                "INDEV";
-            this.linkLabel1.UseCompatibleTextRendering = true;
             // 
             // settingTabControl
             // 
@@ -66,7 +50,6 @@
             // 
             // generalSettingTabPage
             // 
-            this.generalSettingTabPage.Controls.Add(this.linkLabel1);
             this.generalSettingTabPage.Location = new System.Drawing.Point(25, 4);
             this.generalSettingTabPage.Name = "generalSettingTabPage";
             this.generalSettingTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -101,14 +84,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings - NBTExplorer 2.0";
             this.settingTabControl.ResumeLayout(false);
-            this.generalSettingTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TabControl settingTabControl;
         private System.Windows.Forms.TabPage generalSettingTabPage;
         private System.Windows.Forms.TabPage graphicsSettingsTabPage;

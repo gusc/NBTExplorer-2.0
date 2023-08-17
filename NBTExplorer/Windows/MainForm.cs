@@ -14,6 +14,7 @@ namespace NBTExplorer.Windows
 {
     using Predicates = NodeTreeController.Predicates;
     using NBTModel.Interop;
+    using System.Drawing;
 
     public partial class MainForm : Form
     {
@@ -114,7 +115,7 @@ namespace NBTExplorer.Windows
                 OpenPaths(paths);
             }
             else {
-                OpenMinecraftDirectory();
+                OpenHomeDirectory();
             }
 
             UpdateOpenMenu();
@@ -251,28 +252,28 @@ namespace NBTExplorer.Windows
             }
         }
 
-        private void OpenMinecraftDirectory ()
+        private void OpenHomeDirectory ()
         {
-            if (!ConfirmAction("Open Minecraft save folder anyway?"))
+            if (!ConfirmAction("Open software Home folder anyway?"))
                 return;
 
             try {
-                string path = Environment.ExpandEnvironmentVariables("%APPDATA%");
-                if (!Directory.Exists(path)) {
-                    path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string minecraftpath = Environment.ExpandEnvironmentVariables("%APPDATA%");
+                if (!Directory.Exists(minecraftpath)) {
+                    minecraftpath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 }
 
-                path = Path.Combine(path, ".minecraft");
-                path = Path.Combine(path, "saves");
+                minecraftpath = Path.Combine(minecraftpath, ".minecraft");
+                minecraftpath = Path.Combine(minecraftpath, "saves");
 
-                if (!Directory.Exists(path)) {
-                    path = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
+                if (!Directory.Exists(minecraftpath)) {
+                    minecraftpath = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
                 }
 
-                OpenPaths(new string[] { path });
+                OpenPaths(new string[] { minecraftpath });
             }
             catch (Exception e) {
-                MessageBox.Show("Could not open default Minecraft save directory");
+                MessageBox.Show("Could not open default software Home directory");
                 Console.WriteLine(e.Message);
 
                 try {
@@ -802,7 +803,7 @@ namespace NBTExplorer.Windows
 
         private void _menuItemOpenMinecraftSaveFolder_Click (object sender, EventArgs e)
         {
-            OpenMinecraftDirectory();
+            OpenHomeDirectory();
         }
 
         private void _menuItemSave_Click (object sender, EventArgs e)

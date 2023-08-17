@@ -843,9 +843,11 @@ namespace NBTExplorer.Controllers
                 if (menu.Items.Count > 0)
                     menu.Items.Add(new ToolStripSeparator());
 
-                ToolStripMenuItem itemOpenExplorer = new ToolStripMenuItem("Open in E&xplorer", null, _contextOpenInExplorer_Click);
+                ToolStripMenuItem itemOpenExplorer = new ToolStripMenuItem("Open in E&xplorer", Properties.Resources.FileExplorer, _contextOpenInExplorer_Click);
                 menu.Items.Add(itemOpenExplorer);
             }
+
+            menu.BackColor = System.Drawing.Color.FromArgb(242, 242, 242);
 
             return (menu.Items.Count > 0) ? menu : null;
         }

@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNodeForm));
             this._sizeField = new System.Windows.Forms.TextBox();
             this._sizeFieldLabel = new System.Windows.Forms.Label();
             this._nameFieldLabel = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@
             this._buttonOK.UseVisualStyleBackColor = true;
             this._buttonOK.Click += new System.EventHandler(this._buttonOK_Click);
             // 
-            // CreateNode
+            // CreateNodeForm
             // 
             this.AcceptButton = this._buttonOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,9 +104,10 @@
             this.Controls.Add(this._nameFieldLabel);
             this.Controls.Add(this._nameField);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "CreateNode";
+            this.Name = "CreateNodeForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Create Tag...";

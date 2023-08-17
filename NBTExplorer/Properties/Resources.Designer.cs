@@ -83,9 +83,9 @@ namespace NBTExplorer.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap settings {
+        internal static System.Drawing.Bitmap FileExplorer {
             get {
-                object obj = ResourceManager.GetObject("settings", resourceCulture);
+                object obj = ResourceManager.GetObject("FileExplorer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

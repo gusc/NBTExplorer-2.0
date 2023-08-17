@@ -36,15 +36,15 @@
             // linkLabel1
             // 
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(178, 19);
+            this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(169, 19);
             this.linkLabel1.Location = new System.Drawing.Point(96, 12);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(272, 133);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "NBTExplorer 2.0 {ver}\r\nCopyright ©2023 foxy pirate cove / Fnaf\r\n\r\nNBTExplorer 2.0" +
-    " is based on NBTExplorer by Justin Aquadro\r\n\r\nEmail: foxypiratecove12@gmail.com\r" +
-    "\nNBTExplorer 2.0 Github Project Page";
+            this.linkLabel1.Text = "NBTExplorer 2.0 v{ver}\r\n©2023 foxy pirate cove / Fnaf\r\n\r\nNBTExplorer 2.0 is based" +
+    " on NBTExplorer by Justin Aquadro\r\n\r\nEmail: foxypiratecove12@gmail.com\r\nNBTExplo" +
+    "rer 2.0 Github Project Page";
             this.linkLabel1.UseCompatibleTextRendering = true;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 

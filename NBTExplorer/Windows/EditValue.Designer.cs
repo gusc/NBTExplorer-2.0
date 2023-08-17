@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditValue));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this._buttonCancel = new System.Windows.Forms.Button();
             this._buttonOK = new System.Windows.Forms.Button();
@@ -72,10 +73,13 @@
             this.Controls.Add(this._buttonOK);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EditValue";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Edit Value...";
             this.ResumeLayout(false);
             this.PerformLayout();
