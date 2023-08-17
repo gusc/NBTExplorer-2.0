@@ -254,7 +254,7 @@ namespace NBTExplorer.Windows
 
         private void OpenHomeDirectory ()
         {
-            if (!ConfirmAction("Open software Home folder anyway?"))
+            if (!ConfirmAction("Open Software Home folder anyway?"))
                 return;
 
             try {
@@ -273,7 +273,7 @@ namespace NBTExplorer.Windows
                 OpenPaths(new string[] { minecraftpath });
             }
             catch (Exception e) {
-                MessageBox.Show("Could not open default software Home directory");
+                MessageBox.Show("Could not open default Software Home directory");
                 Console.WriteLine(e.Message);
 
                 try {
@@ -328,7 +328,7 @@ namespace NBTExplorer.Windows
         private bool ConfirmAction (string actionMessage)
         {
             if (_controller.CheckModifications()) {
-                if (MessageBox.Show("You currently have unsaved changes.  " + actionMessage, "Unsaved Changes", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                if (MessageBox.Show("You currently have unsaved changes. " + actionMessage, "Unsaved Changes", MessageBoxButtons.OKCancel) != DialogResult.OK)
                     return false;
             }
 

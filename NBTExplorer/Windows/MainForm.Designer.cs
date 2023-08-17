@@ -167,7 +167,7 @@
             this._menuItemOpenMinecraftSaveFolder.Image = ((System.Drawing.Image)(resources.GetObject("_menuItemOpenMinecraftSaveFolder.Image")));
             this._menuItemOpenMinecraftSaveFolder.Name = "_menuItemOpenMinecraftSaveFolder";
             this._menuItemOpenMinecraftSaveFolder.Size = new System.Drawing.Size(230, 22);
-            this._menuItemOpenMinecraftSaveFolder.Text = "Open Software &Home Floder";
+            this._menuItemOpenMinecraftSaveFolder.Text = "Open Software &Home folder";
             // 
             // toolStripSeparator12
             // 
@@ -439,7 +439,7 @@
             this._menuItemAbout.Image = ((System.Drawing.Image)(resources.GetObject("_menuItemAbout.Image")));
             this._menuItemAbout.Name = "_menuItemAbout";
             this._menuItemAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this._menuItemAbout.Size = new System.Drawing.Size(180, 22);
+            this._menuItemAbout.Size = new System.Drawing.Size(141, 22);
             this._menuItemAbout.Text = "&About";
             // 
             // _menuItemSettings
@@ -448,7 +448,7 @@
             this._menuItemSettings.Image = ((System.Drawing.Image)(resources.GetObject("_menuItemSettings.Image")));
             this._menuItemSettings.Name = "_menuItemSettings";
             this._menuItemSettings.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this._menuItemSettings.Size = new System.Drawing.Size(180, 22);
+            this._menuItemSettings.Size = new System.Drawing.Size(141, 22);
             this._menuItemSettings.Text = "Settings";
             this._menuItemSettings.Click += new System.EventHandler(this._menuItemSettings_Click);
             // 
