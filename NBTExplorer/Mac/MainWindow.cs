@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
+using Foundation;
+using AppKit;
 using NBTExplorer.Mac;
 using System.IO;
 using NBTExplorer.Model;
@@ -12,7 +12,7 @@ using System.Threading;
 
 namespace NBTExplorer
 {
-	public partial class MainWindow : MonoMac.AppKit.NSWindow
+	public partial class MainWindow : AppKit.NSWindow
 	{
 		#region Constructors
 		
@@ -191,72 +191,72 @@ namespace NBTExplorer
 			ActionSave ();
 		}
 
-		partial void ActionRename (MonoMac.Foundation.NSObject sender)
+		partial void ActionRename (Foundation.NSObject sender)
 		{
 			ActionRenameValue();
 		}
 
-		partial void ActionEdit (MonoMac.Foundation.NSObject sender)
+		partial void ActionEdit (Foundation.NSObject sender)
 		{
 			ActionEditValue();
 		}
 
-		partial void ActionDelete (MonoMac.Foundation.NSObject sender)
+		partial void ActionDelete (Foundation.NSObject sender)
 		{
 			ActionDeleteValue();
 		}
 
-		partial void ActionInsertByte (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertByte (Foundation.NSObject sender)
 		{
 			ActionInsertByteTag();
 		}
 
-		partial void ActionInsertShort (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertShort (Foundation.NSObject sender)
 		{
 			ActionInsertShortTag();
 		}
 
-		partial void ActionInsertInt (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertInt (Foundation.NSObject sender)
 		{
 			ActionInsertIntTag();
 		}
 
-		partial void ActionInsertLong (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertLong (Foundation.NSObject sender)
 		{
 			ActionInsertLongTag();
 		}
 
-		partial void ActionInsertFloat (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertFloat (Foundation.NSObject sender)
 		{
 			ActionInsertFloatTag();
 		}
 
-		partial void ActionInsertDouble (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertDouble (Foundation.NSObject sender)
 		{
 			ActionInsertDoubleTag();
 		}
 
-		partial void ActionInsertByteArray (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertByteArray (Foundation.NSObject sender)
 		{
 			ActionInsertByteArrayTag();
 		}
 
-		partial void ActionInsertIntArray (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertIntArray (Foundation.NSObject sender)
 		{
 			ActionInsertIntArrayTag();
 		}
 
-		partial void ActionInsertString (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertString (Foundation.NSObject sender)
 		{
 			ActionInsertStringTag();
 		}
 
-		partial void ActionInsertList (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertList (Foundation.NSObject sender)
 		{
 			ActionInsertListTag();
 		}
 
-		partial void ActionInsertCompound (MonoMac.Foundation.NSObject sender)
+		partial void ActionInsertCompound (Foundation.NSObject sender)
 		{
 			ActionInsertCompoundTag();
 		}

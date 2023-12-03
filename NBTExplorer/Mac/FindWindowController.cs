@@ -2,12 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
+using Foundation;
+using AppKit;
 
 namespace NBTExplorer.Mac
 {
-	public partial class FindWindowController : MonoMac.AppKit.NSWindowController
+	public partial class FindWindowController : AppKit.NSWindowController
 	{
 		#region Constructors
 		

@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoMac.Foundation;
+using Foundation;
 
 namespace NBTExplorer
 {
@@ -12,160 +12,160 @@ namespace NBTExplorer
 	partial class AppDelegate
 	{
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuAbout { get; set; }
+		AppKit.NSMenuItem _menuAbout { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuQuit { get; set; }
+		AppKit.NSMenuItem _menuQuit { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuOpen { get; set; }
+		AppKit.NSMenuItem _menuOpen { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuOpenFolder { get; set; }
+		AppKit.NSMenuItem _menuOpenFolder { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuOpenMinecraft { get; set; }
+		AppKit.NSMenuItem _menuOpenMinecraft { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuSave { get; set; }
+		AppKit.NSMenuItem _menuSave { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuCut { get; set; }
+		AppKit.NSMenuItem _menuCut { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuCopy { get; set; }
+		AppKit.NSMenuItem _menuCopy { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuPaste { get; set; }
+		AppKit.NSMenuItem _menuPaste { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuRename { get; set; }
+		AppKit.NSMenuItem _menuRename { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuEditValue { get; set; }
+		AppKit.NSMenuItem _menuEditValue { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuDelete { get; set; }
+		AppKit.NSMenuItem _menuDelete { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuMoveUp { get; set; }
+		AppKit.NSMenuItem _menuMoveUp { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuMoveDown { get; set; }
+		AppKit.NSMenuItem _menuMoveDown { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuFind { get; set; }
+		AppKit.NSMenuItem _menuFind { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuFindNext { get; set; }
+		AppKit.NSMenuItem _menuFindNext { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertByte { get; set; }
+		AppKit.NSMenuItem _menuInsertByte { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertShort { get; set; }
+		AppKit.NSMenuItem _menuInsertShort { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertInt { get; set; }
+		AppKit.NSMenuItem _menuInsertInt { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertLong { get; set; }
+		AppKit.NSMenuItem _menuInsertLong { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertFloat { get; set; }
+		AppKit.NSMenuItem _menuInsertFloat { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertDouble { get; set; }
+		AppKit.NSMenuItem _menuInsertDouble { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertByteArray { get; set; }
+		AppKit.NSMenuItem _menuInsertByteArray { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertIntArray { get; set; }
+		AppKit.NSMenuItem _menuInsertIntArray { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertString { get; set; }
+		AppKit.NSMenuItem _menuInsertString { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertList { get; set; }
+		AppKit.NSMenuItem _menuInsertList { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSMenuItem _menuInsertCompound { get; set; }
+		AppKit.NSMenuItem _menuInsertCompound { get; set; }
 
 		[Action ("ActionOpen:")]
-		partial void ActionOpen (MonoMac.Foundation.NSObject sender);
+		partial void ActionOpen (Foundation.NSObject sender);
 
 		[Action ("ActionOpenFolder:")]
-		partial void ActionOpenFolder (MonoMac.Foundation.NSObject sender);
+		partial void ActionOpenFolder (Foundation.NSObject sender);
 
 		[Action ("ActionOpenMinecraft:")]
-		partial void ActionOpenMinecraft (MonoMac.Foundation.NSObject sender);
+		partial void ActionOpenMinecraft (Foundation.NSObject sender);
 
 		[Action ("ActionSave:")]
-		partial void ActionSave (MonoMac.Foundation.NSObject sender);
+		partial void ActionSave (Foundation.NSObject sender);
 
 		[Action ("ActionCut:")]
-		partial void ActionCut (MonoMac.Foundation.NSObject sender);
+		partial void ActionCut (Foundation.NSObject sender);
 
 		[Action ("ActionCopy:")]
-		partial void ActionCopy (MonoMac.Foundation.NSObject sender);
+		partial void ActionCopy (Foundation.NSObject sender);
 
 		[Action ("ActionPaste:")]
-		partial void ActionPaste (MonoMac.Foundation.NSObject sender);
+		partial void ActionPaste (Foundation.NSObject sender);
 
 		[Action ("ActionRename:")]
-		partial void ActionRename (MonoMac.Foundation.NSObject sender);
+		partial void ActionRename (Foundation.NSObject sender);
 
 		[Action ("ActionEditValue:")]
-		partial void ActionEditValue (MonoMac.Foundation.NSObject sender);
+		partial void ActionEditValue (Foundation.NSObject sender);
 
 		[Action ("ActionDelete:")]
-		partial void ActionDelete (MonoMac.Foundation.NSObject sender);
+		partial void ActionDelete (Foundation.NSObject sender);
 
 		[Action ("ActionMoveUp:")]
-		partial void ActionMoveUp (MonoMac.Foundation.NSObject sender);
+		partial void ActionMoveUp (Foundation.NSObject sender);
 
 		[Action ("ActionMoveDown:")]
-		partial void ActionMoveDown (MonoMac.Foundation.NSObject sender);
+		partial void ActionMoveDown (Foundation.NSObject sender);
 
 		[Action ("ActionFind:")]
-		partial void ActionFind (MonoMac.Foundation.NSObject sender);
+		partial void ActionFind (Foundation.NSObject sender);
 
 		[Action ("ActionFindNext:")]
-		partial void ActionFindNext (MonoMac.Foundation.NSObject sender);
+		partial void ActionFindNext (Foundation.NSObject sender);
 
 		[Action ("ActionInsertByte:")]
-		partial void ActionInsertByte (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertByte (Foundation.NSObject sender);
 
 		[Action ("ActionInsertShort:")]
-		partial void ActionInsertShort (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertShort (Foundation.NSObject sender);
 
 		[Action ("ActionInsertInt:")]
-		partial void ActionInsertInt (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertInt (Foundation.NSObject sender);
 
 		[Action ("ActionInsertLong:")]
-		partial void ActionInsertLong (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertLong (Foundation.NSObject sender);
 
 		[Action ("ActionInsertFloat:")]
-		partial void ActionInsertFloat (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertFloat (Foundation.NSObject sender);
 
 		[Action ("ActionInsertDouble:")]
-		partial void ActionInsertDouble (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertDouble (Foundation.NSObject sender);
 
 		[Action ("ActionInsertByteArray:")]
-		partial void ActionInsertByteArray (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertByteArray (Foundation.NSObject sender);
 
 		[Action ("ActionInsertIntArray:")]
-		partial void ActionInsertIntArray (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertIntArray (Foundation.NSObject sender);
 
 		[Action ("ActionInsertString:")]
-		partial void ActionInsertString (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertString (Foundation.NSObject sender);
 
 		[Action ("ActionInsertList:")]
-		partial void ActionInsertList (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertList (Foundation.NSObject sender);
 
 		[Action ("ActionInsertCompound:")]
-		partial void ActionInsertCompound (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertCompound (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

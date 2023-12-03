@@ -1,9 +1,9 @@
 using System;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
-using MonoMac.CoreGraphics;
+using Foundation;
+using AppKit;
+using CoreGraphics;
 using System.Drawing;
-using MonoMac.ObjCRuntime;
+using ObjCRuntime;
 using System.Collections.Generic;
 
 namespace NBTExplorer.Mac

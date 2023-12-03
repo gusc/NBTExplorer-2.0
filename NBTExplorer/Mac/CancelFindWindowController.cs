@@ -2,12 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
+using Foundation;
+using AppKit;
 
 namespace NBTExplorer.Mac
 {
-	public partial class CancelFindWindowController : MonoMac.AppKit.NSWindowController
+	public partial class CancelFindWindowController : AppKit.NSWindowController
 	{
 		#region Constructors
 		
@@ -55,7 +55,7 @@ namespace NBTExplorer.Mac
 			NSApplication.SharedApplication.StopModalWithCode((int)ModalResult.Cancel);
 		}
 
-		partial void ActionCancel (MonoMac.Foundation.NSObject sender)
+		partial void ActionCancel (Foundation.NSObject sender)
 		{
 			NSApplication.SharedApplication.StopModalWithCode((int)ModalResult.Cancel);
 		}

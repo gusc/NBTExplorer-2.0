@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
+using Foundation;
+using AppKit;
 using Substrate.Nbt;
 
 namespace NBTExplorer.Mac
 {
-	public partial class CreateNodeWindowController : MonoMac.AppKit.NSWindowController
+	public partial class CreateNodeWindowController : AppKit.NSWindowController
 	{
 		private string _name;
 		private int _size;

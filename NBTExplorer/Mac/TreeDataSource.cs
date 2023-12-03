@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using MonoMac.AppKit;
-using MonoMac.Foundation;
+using AppKit;
+using Foundation;
 
 namespace NBTExplorer.Mac
 {

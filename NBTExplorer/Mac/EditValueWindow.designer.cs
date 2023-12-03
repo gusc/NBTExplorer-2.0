@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoMac.Foundation;
+using Foundation;
 
 namespace NBTExplorer.Mac
 {
@@ -12,13 +12,13 @@ namespace NBTExplorer.Mac
 	partial class EditValueWindowController
 	{
 		[Outlet]
-		MonoMac.AppKit.NSTextField _valueField { get; set; }
+		AppKit.NSTextField _valueField { get; set; }
 
 		[Action ("ActionOK:")]
-		partial void ActionOK (MonoMac.Foundation.NSObject sender);
+		partial void ActionOK (Foundation.NSObject sender);
 
 		[Action ("ActionCancel:")]
-		partial void ActionCancel (MonoMac.Foundation.NSObject sender);
+		partial void ActionCancel (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoMac.Foundation;
+using Foundation;
 
 namespace NBTExplorer
 {
@@ -12,109 +12,109 @@ namespace NBTExplorer
 	partial class MainWindow
 	{
 		[Outlet]
-		MonoMac.AppKit.NSToolbar _toolbar { get; set; }
+		AppKit.NSToolbar _toolbar { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarOpenFolder { get; set; }
+		AppKit.NSToolbarItem _toolbarOpenFolder { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarSave { get; set; }
+		AppKit.NSToolbarItem _toolbarSave { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarRename { get; set; }
+		AppKit.NSToolbarItem _toolbarRename { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarEdit { get; set; }
+		AppKit.NSToolbarItem _toolbarEdit { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarDelete { get; set; }
+		AppKit.NSToolbarItem _toolbarDelete { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarByte { get; set; }
+		AppKit.NSToolbarItem _toolbarByte { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarShort { get; set; }
+		AppKit.NSToolbarItem _toolbarShort { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarInt { get; set; }
+		AppKit.NSToolbarItem _toolbarInt { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarLong { get; set; }
+		AppKit.NSToolbarItem _toolbarLong { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarFloat { get; set; }
+		AppKit.NSToolbarItem _toolbarFloat { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarDouble { get; set; }
+		AppKit.NSToolbarItem _toolbarDouble { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarByteArray { get; set; }
+		AppKit.NSToolbarItem _toolbarByteArray { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarIntArray { get; set; }
+		AppKit.NSToolbarItem _toolbarIntArray { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarString { get; set; }
+		AppKit.NSToolbarItem _toolbarString { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarList { get; set; }
+		AppKit.NSToolbarItem _toolbarList { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSToolbarItem _toolbarCompound { get; set; }
+		AppKit.NSToolbarItem _toolbarCompound { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSScrollView _mainScrollView { get; set; }
+		AppKit.NSScrollView _mainScrollView { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSOutlineView _mainOutlineView { get; set; }
+		AppKit.NSOutlineView _mainOutlineView { get; set; }
 
 		[Action ("ActionOpenFolder:")]
-		partial void ActionOpenFolder (MonoMac.Foundation.NSObject sender);
+		partial void ActionOpenFolder (Foundation.NSObject sender);
 
 		[Action ("ActionSave:")]
-		partial void ActionSave (MonoMac.Foundation.NSObject sender);
+		partial void ActionSave (Foundation.NSObject sender);
 
 		[Action ("ActionRename:")]
-		partial void ActionRename (MonoMac.Foundation.NSObject sender);
+		partial void ActionRename (Foundation.NSObject sender);
 
 		[Action ("ActionEdit:")]
-		partial void ActionEdit (MonoMac.Foundation.NSObject sender);
+		partial void ActionEdit (Foundation.NSObject sender);
 
 		[Action ("ActionDelete:")]
-		partial void ActionDelete (MonoMac.Foundation.NSObject sender);
+		partial void ActionDelete (Foundation.NSObject sender);
 
 		[Action ("ActionInsertByte:")]
-		partial void ActionInsertByte (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertByte (Foundation.NSObject sender);
 
 		[Action ("ActionInsertShort:")]
-		partial void ActionInsertShort (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertShort (Foundation.NSObject sender);
 
 		[Action ("ActionInsertInt:")]
-		partial void ActionInsertInt (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertInt (Foundation.NSObject sender);
 
 		[Action ("ActionInsertLong:")]
-		partial void ActionInsertLong (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertLong (Foundation.NSObject sender);
 
 		[Action ("ActionInsertFloat:")]
-		partial void ActionInsertFloat (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertFloat (Foundation.NSObject sender);
 
 		[Action ("ActionInsertDouble:")]
-		partial void ActionInsertDouble (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertDouble (Foundation.NSObject sender);
 
 		[Action ("ActionInsertByteArray:")]
-		partial void ActionInsertByteArray (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertByteArray (Foundation.NSObject sender);
 
 		[Action ("ActionInsertIntArray:")]
-		partial void ActionInsertIntArray (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertIntArray (Foundation.NSObject sender);
 
 		[Action ("ActionInsertString:")]
-		partial void ActionInsertString (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertString (Foundation.NSObject sender);
 
 		[Action ("ActionInsertList:")]
-		partial void ActionInsertList (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertList (Foundation.NSObject sender);
 
 		[Action ("ActionInsertCompound:")]
-		partial void ActionInsertCompound (MonoMac.Foundation.NSObject sender);
+		partial void ActionInsertCompound (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

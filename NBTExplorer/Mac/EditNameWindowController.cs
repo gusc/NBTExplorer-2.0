@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
+using Foundation;
+using AppKit;
 
 namespace NBTExplorer.Mac
 {
@@ -103,12 +103,12 @@ namespace NBTExplorer.Mac
 			return true;
 		}
 
-		partial void OkayAction (MonoMac.Foundation.NSObject sender)
+		partial void OkayAction (Foundation.NSObject sender)
 		{
 			Apply ();
 		}
 
-		partial void CancelAction (MonoMac.Foundation.NSObject sender)
+		partial void CancelAction (Foundation.NSObject sender)
 		{
 			NSApplication.SharedApplication.StopModalWithCode((int)ModalResult.Cancel);
 		}

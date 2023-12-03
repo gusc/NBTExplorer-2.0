@@ -1,7 +1,7 @@
 using System;
-using MonoMac.AppKit;
-using MonoMac.Foundation;
-using MonoMac.ObjCRuntime;
+using AppKit;
+using Foundation;
+using ObjCRuntime;
 using Substrate.Nbt;
 using System.Runtime.InteropServices;
 
@@ -86,7 +86,7 @@ namespace NBTExplorer.Mac
 
 		public override bool ConformsToProtocol (IntPtr protocol)
 		{
-			// XXX: This is a hack!  There seems to be a bug in MonoMac resulting in different handle addresses
+			// XXX: This is a hack!  There seems to be a bug in Xamarin.Mac resulting in different handle addresses
 			// for two protocols of (seemingly) the same name, so we have no way to make objc accept that we
 			// implement a given protocol.  objc runtime method protocol_getName should be able to help us, but it
 			// crashes the runtime.
