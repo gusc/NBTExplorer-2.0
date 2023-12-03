@@ -16,7 +16,7 @@ namespace NBTExplorer.Mac
 
 			NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
 			pasteboard.ClearContents();
-			pasteboard.WriteObjects(new NSPasteboardWriting[] { dataItem });
+			pasteboard.WriteObjects(new NbtClipboardDataMac[] { dataItem });
 		}
 
 		public NbtClipboardData CopyFromClipboard ()
@@ -51,21 +51,23 @@ namespace NBTExplorer.Mac
 	}
 
 	[Adopts("NSCoding")]
+	[Adopts("NSSecureCoding")]
 	[Adopts("NSPasteboardReading")]
     [Adopts("NSPasteboardWriting")]
     [Register("NbtClipboardDataMac")]
-	public class NbtClipboardDataMac : NSPasteboardWriting
+	public class NbtClipboardDataMac : NSObject, INSPasteboardReading, INSPasteboardWriting, INSSecureCoding
     {
 		static AdoptsAttribute _readingProtocol = new AdoptsAttribute ("NSPasteboardReading");
         static AdoptsAttribute _writingProtocol = new AdoptsAttribute("NSPasteboardWriting");
         static AdoptsAttribute _codingProtocol = new AdoptsAttribute("NSCoding");
+        static AdoptsAttribute _secureCodingProtocol = new AdoptsAttribute("NSSecureCoding");
 
-		private static string _pasteboardItemName = "jaquadro.nbtexplorer.nbtClipboardDataMac";
+        private static string _pasteboardItemName = "jaquadro.nbtexplorer.nbtClipboardDataMac";
 
 		public static NbtClipboardDataMac Type
 		{
 			get {
-                NbtClipboardDataMac inst = new NbtClipboardDataMac();
+				NbtClipboardDataMac inst = new NbtClipboardDataMac();
 				return inst;
 			}
 		}
@@ -102,6 +104,8 @@ namespace NBTExplorer.Mac
 				return true;
 			if (protocol == _codingProtocol.ProtocolHandle)
 				return true;
+			if (protocol == _secureCodingProtocol.ProtocolHandle)
+				return true;
 			return base.ConformsToProtocol (protocol);
 		}
 
@@ -118,20 +122,22 @@ namespace NBTExplorer.Mac
 		}
 
 		[Export ("initWithCoder:")]
-		public static NbtClipboardDataMac InitWithCoder(NSCoder coder)
+		public NbtClipboardDataMac(NSCoder coder)
 		{
-            NbtClipboardDataMac data = new NbtClipboardDataMac();
-			data._name = (NSString)coder.DecodeObject("name");
-            data._data = coder.DecodeBytes("data");
-			return data;
+            _name = (NSString)coder.DecodeObject("name");
+            _data = coder.DecodeBytes("data");
 		}
 
-		[Export ("encodeWithCoder:")]
-		public void Encode (NSCoder coder)
-		{
-			coder.Encode ((NSString)_name, "name");
-			coder.Encode (_data, "data");
-		}
+        public void EncodeTo(NSCoder encoder)
+        {
+            encoder.Encode((NSString)_name, "name");
+            encoder.Encode(_data, "data");
+        }
+
+        [Export("supportsSecureCoding")]
+        public static bool SupportsSecureCoding => true;
+
+        // Reading
 
         [Export("readableTypesForPasteboard:")]
         public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard)
@@ -157,14 +163,16 @@ namespace NBTExplorer.Mac
 				return null;
 		}
 
+		// Writing
+
         [Export("writableTypesForPasteboard:")]
-        public override string[] GetWritableTypesForPasteboard(NSPasteboard pasteboard)
+        public string[] GetWritableTypesForPasteboard(NSPasteboard pasteboard)
         {
             return new string[] { _pasteboardItemName };
         }
 
         [Export("pasteboardPropertyListForType:")]
-        public override NSObject GetPasteboardPropertyListForType(string type)
+        public NSObject GetPasteboardPropertyListForType(string type)
         {
             if (type == _pasteboardItemName)
                 return NSKeyedArchiver.ArchivedDataWithRootObject(this);
@@ -173,7 +181,7 @@ namespace NBTExplorer.Mac
         }
 
         [Export("writingOptionsForType:pasteboard:")]
-        public override NSPasteboardWritingOptions GetWritingOptionsForType(string type, NSPasteboard pasteboard)
+        public NSPasteboardWritingOptions GetWritingOptionsForType(string type, NSPasteboard pasteboard)
         {
             return 0;
         }
@@ -185,6 +193,6 @@ namespace NBTExplorer.Mac
 		{
 			return false;
 		}
-	}
+    }
 }
 
