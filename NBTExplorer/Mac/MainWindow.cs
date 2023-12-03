@@ -413,10 +413,11 @@ namespace NBTExplorer
 			
 			node.Nodes.Clear();
 			foreach (DataNode child in dataNode.Nodes) {
-				if (!currentNodes.ContainsKey(child))
-					node.Nodes.Add(new TreeDataNode(child));
+                // Gusts: We need to call AddNode to update parent
+                if (!currentNodes.ContainsKey(child))
+					node.AddNode(new TreeDataNode(child));
 				else
-					node.Nodes.Add(currentNodes[child]);
+					node.AddNode(currentNodes[child]);
 			}
 			
 			//foreach (TreeDataNode child in node.Nodes)
@@ -658,6 +659,9 @@ namespace NBTExplorer
 				return;
 
 			if (node.Data.DeleteNode()) {
+				if (node.Parent == null)
+					return;
+
 				UpdateUI(node.Parent.Data);
 				//UpdateNodeText(node.Parent);
 				TreeDataNode parent = node.Parent;
