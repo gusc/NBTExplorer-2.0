@@ -5,13 +5,13 @@
 	<key>CFBundleDocumentTypes</key>
 	<array/>
 	<key>CFBundleIconFile</key>
-	<string>nbte.icns</string>
+	<string>iconfile</string>
 	<key>CFBundleIdentifier</key>
 	<string>jaquadro.nbtexplorer</string>
 	<key>CFBundleName</key>
 	<string>NBTExplorer</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.3</string>
+	<string>2.8.0</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
