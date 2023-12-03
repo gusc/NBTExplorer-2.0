@@ -1,0 +1,3 @@
+[submodule "Substrate"]
+	path = Substrate
+	url = ../Substrate.git
