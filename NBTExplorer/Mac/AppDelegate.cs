@@ -14,9 +14,9 @@ namespace NBTExplorer
 		{
 		}
 
-		public override void FinishedLaunching (NSObject notification)
-		{
-			mainWindowController = new MainWindowController ();
+        public override void DidFinishLaunching(NSNotification notification)
+        {
+            mainWindowController = new MainWindowController ();
 			mainWindowController.Window.MakeKeyAndOrderFront (this);
 			mainWindowController.Window.AppDelegate = this;
 		}

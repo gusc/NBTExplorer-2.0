@@ -19,7 +19,7 @@ namespace NBTExplorer.Mac
 			get { return _nodes; }
 		}
 
-		public override int GetChildrenCount (NSOutlineView outlineView, NSObject item)
+		public override nint GetChildrenCount (NSOutlineView outlineView, NSObject item)
 		{
 			if (item is TreeDataNode) {
 				TreeDataNode nodeItem = item as TreeDataNode;
@@ -37,15 +37,14 @@ namespace NBTExplorer.Mac
 
 			return (NSString)nodeItem.CombinedName;
 		}
-
-		public override NSObject GetChild (NSOutlineView outlineView, int childIndex, NSObject ofItem)
-		{
-			TreeDataNode nodeItem = ofItem as TreeDataNode;
+        public override NSObject GetChild(NSOutlineView outlineView, nint childIndex, NSObject item)
+        {
+            TreeDataNode nodeItem = item as TreeDataNode;
 			if (nodeItem != null) {
-				return nodeItem.Nodes [childIndex];
+				return nodeItem.Nodes [(int)childIndex];
 			}
 
-			return Nodes[childIndex];
+			return Nodes[(int)childIndex];
 		}
 
 		public override bool ItemExpandable (NSOutlineView outlineView, NSObject item)

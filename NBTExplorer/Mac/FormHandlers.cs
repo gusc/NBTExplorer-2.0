@@ -1,5 +1,6 @@
 using System;
 using AppKit;
+using NBTModel.Interop;
 
 namespace NBTExplorer.Mac
 {
@@ -19,7 +20,7 @@ namespace NBTExplorer.Mac
 		private static ModalResult RunWindow (NSWindowController controller)
 		{
 			//NSApplication.SharedApplication.BeginSheet (controller.Window, NSApplication.SharedApplication.MainWindow);
-			int response = NSApplication.SharedApplication.RunModalForWindow (controller.Window);
+			nint response = NSApplication.SharedApplication.RunModalForWindow (controller.Window);
 			
 			//NSApplication.SharedApplication.EndSheet(controller.Window);
 			controller.Window.Close();
@@ -28,7 +29,7 @@ namespace NBTExplorer.Mac
 			if (!Enum.IsDefined(typeof(ModalResult), response))
 				response = 0;
 
-			return (ModalResult)response;
+			return (ModalResult)(int)response;
 		}
 		
 		public static void MessageBoxHandler (string message)

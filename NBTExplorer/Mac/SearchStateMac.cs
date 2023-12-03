@@ -26,8 +26,11 @@ namespace NBTExplorer.Mac
 		public string SearchValue { get; set; }
 		
 		public IEnumerator<DataNode> State { get; set; }
-		
-		public void InvokeDiscoverCallback (DataNode node)
+        public bool TerminateOnDiscover { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool IsTerminated { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public float ProgressRate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void InvokeDiscoverCallback (DataNode node)
 		{
 			if (_sender != null && DiscoverCallback != null)
 				_sender.BeginInvokeOnMainThread(delegate { DiscoverCallback(node); });
@@ -54,8 +57,13 @@ namespace NBTExplorer.Mac
 				_sender.BeginInvokeOnMainThread(delegate { EndCallback(node); });
 			//_sender.BeginInvokeOnMainThread(EndCallback, new object[] { node });
 		}
-		
-		#endregion
-	}
+
+        public bool TestNode(DataNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
 }
 

@@ -5,8 +5,6 @@
     <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AssemblyName>NBTExplorerMac</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
     <RootNamespace>NBTExplorerMac</RootNamespace>
   </PropertyGroup>
@@ -24,8 +22,13 @@
     <IncludeMonoRuntime>false</IncludeMonoRuntime>
     <UseSGen>true</UseSGen>
     <UseRefCounting>true</UseRefCounting>
-    <AOTMode></AOTMode>
     <HttpClientHandler></HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <CodesignProvision></CodesignProvision>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <AOTMode>All</AOTMode>
+    <XamMacArch>x86_64</XamMacArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,8 +53,7 @@
         </Command>
       </CustomCommands>
     </CustomCommands>
-    <LinkMode>SdkOnly</LinkMode>
-    <AOTMode></AOTMode>
+    <LinkMode>None</LinkMode>
     <HttpClientHandler></HttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
@@ -62,9 +64,6 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Data" />
     <Reference Include="Xamarin.Mac" />
-    <Reference Include="Substrate">
-      <HintPath>..\Substrate\SubstrateCS\bin\Release\NET2\Substrate.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -85,7 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +148,16 @@
     <InterfaceDefinition Include="Mac\EditValueWindow.xib" />
     <InterfaceDefinition Include="Mac\FindWindow.xib" />
     <InterfaceDefinition Include="Mac\CancelFindWindow.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NBTModel\NBTModel.csproj">
+      <Project>{20D7CBA3-5B6D-40B0-8D28-4C9A58E4FFBC}</Project>
+      <Name>NBTModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Substrate\SubstrateCS\Substrate %28NET2%29.csproj">
+      <Project>{AFE30E14-3F2F-4461-9F7D-147AB4DCA4C3}</Project>
+      <Name>Substrate (NET2)</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />

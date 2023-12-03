@@ -132,33 +132,33 @@ namespace NBTExplorer.Mac
 		{
 			List<ImageAndTextCell> markedForDelete = new List<ImageAndTextCell> ();
 
-			foreach (ImageAndTextCell cell in _refPool) {
-				uint count = Messaging.UInt32_objc_msgSend (cell.Handle, selRetainCount);
-				if (count == 1)
-					markedForDelete.Add (cell);
-			}
+			//foreach (ImageAndTextCell cell in _refPool) {
+			//	uint count = Messaging.UInt32_objc_msgSend (cell.Handle, selRetainCount);
+			//	if (count == 1)
+			//		markedForDelete.Add (cell);
+			//}
 
-			foreach (ImageAndTextCell cell in markedForDelete) {
-				_refPool.Remove (cell);
-				cell.Dispose ();
-			}
+			//foreach (ImageAndTextCell cell in markedForDelete) {
+			//	_refPool.Remove (cell);
+			//	cell.Dispose ();
+			//}
 		}
 
 		// Method 5
 
 		static IntPtr selCopyWithZone = Selector.GetHandle("copyWithZone:");
 
-		[Export("copyWithZone:")]
-		public virtual NSObject CopyWithZone(IntPtr zone) {
-			IntPtr copyHandle = Messaging.IntPtr_objc_msgSendSuper_IntPtr(SuperHandle, selCopyWithZone, zone);
-			ImageAndTextCell cell = new ImageAndTextCell(copyHandle) {
-				Image = Image,
-			};
+		//[Export("copyWithZone:")]
+		//public virtual NSObject CopyWithZone(IntPtr zone) {
+		//	IntPtr copyHandle = Messaging.IntPtr_objc_msgSendSuper_IntPtr(SuperHandle, selCopyWithZone, zone);
+		//	ImageAndTextCell cell = new ImageAndTextCell(copyHandle) {
+		//		Image = Image,
+		//	};
 
-			_refPool.Add(cell);
+		//	_refPool.Add(cell);
 			
-			return cell;
-		}
+		//	return cell;
+		//}
 
 		/*[Export("dealloc")]
 		public void Dealloc ()
@@ -224,48 +224,48 @@ namespace NBTExplorer.Mac
 			set { _image = value; }
 		}
 
-		public override RectangleF ImageRectForBounds (RectangleF theRect)
-		{
+        public override CGRect ImageRectForBounds(CGRect theRect)
+        {
 			if (_image != null) {
-				PointF origin = new PointF(theRect.X + 3, theRect.Y + (float)Math.Ceiling((theRect.Height - _image.Size.Height) / 2));
-				return new RectangleF(origin, _image.Size);
+				CGPoint origin = new CGPoint(theRect.X + 3, theRect.Y + (float)Math.Ceiling((theRect.Height - _image.Size.Height) / 2));
+				return new CGRect(origin, _image.Size);
 			}
 			else
-				return RectangleF.Empty;
+				return CGRect.Empty;
 		}
 
-		public override RectangleF TitleRectForBounds (RectangleF theRect)
+		public override CGRect TitleRectForBounds (CGRect theRect)
 		{
 			if (_image != null) {
-				PointF origin = new PointF(theRect.X + 3 + _image.Size.Width, theRect.Y);
-				SizeF size = new SizeF(theRect.Width - 3 - _image.Size.Width, theRect.Height);
-				return new RectangleF(origin, size);
+                CGPoint origin = new CGPoint(theRect.X + 3 + _image.Size.Width, theRect.Y);
+                CGSize size = new CGSize(theRect.Width - 3 - _image.Size.Width, theRect.Height);
+				return new CGRect(origin, size);
 			}
 			else
 				return base.TitleRectForBounds(theRect);
 		}
 
-		public override void EditWithFrame (RectangleF aRect, NSView inView, NSText editor, NSObject delegateObject, NSEvent theEvent)
+		public override void EditWithFrame (CGRect aRect, NSView inView, NSText editor, NSObject delegateObject, NSEvent theEvent)
 		{
-			RectangleF textFrame, imageFrame;
+            CGRect textFrame, imageFrame;
 			aRect.Divide(3 + _image.Size.Width, CGRectEdge.MinXEdge, out imageFrame, out textFrame);
 			base.EditWithFrame(textFrame, inView, editor, delegateObject, theEvent);
 		}
 
-		public override void SelectWithFrame (RectangleF aRect, NSView inView, NSText editor, NSObject delegateObject, int selStart, int selLength)
-		{
-			RectangleF textFrame, imageFrame;
+		public override void SelectWithFrame(CGRect aRect, NSView inView, NSText editor, NSObject delegateObject, nint selStart, nint selLength)
+        {
+            CGRect textFrame, imageFrame;
 			aRect.Divide(3 + _image.Size.Width, CGRectEdge.MinXEdge, out imageFrame, out textFrame);
 			base.SelectWithFrame(textFrame, inView, editor, delegateObject, selStart, selLength);
 		}
 
-		public override void DrawWithFrame (RectangleF cellFrame, NSView inView)
+		public override void DrawWithFrame (CGRect cellFrame, NSView inView)
 		{
 			//Assert (!_deallocCalled, "DrawWithFrame: Dealloc was called on object");
 			//Assert (!_disposeCalled, "DrawWithFrame: Dispose was called on object");
 
 			if (_image != null) {
-				RectangleF imageFrame;
+                CGRect imageFrame;
 				cellFrame.Divide (3 + _image.Size.Width, CGRectEdge.MinXEdge, out imageFrame, out cellFrame);
 
 				if (DrawsBackground) {
@@ -283,28 +283,28 @@ namespace NBTExplorer.Mac
 				imageFrame.Y += (float)Math.Ceiling ((cellFrame.Height - imageFrame.Height) / 2);
 				//}
 
-				_image.Draw (imageFrame, new RectangleF (PointF.Empty, _image.Size), NSCompositingOperation.SourceOver, 1f, true, null);
+				_image.Draw (imageFrame, new CGRect(CGPoint.Empty, _image.Size), NSCompositingOperation.SourceOver, 1f, true, null);
 			}
 
 			base.DrawWithFrame (cellFrame, inView);
 		}
 
-		public override SizeF CellSize
+		public override CGSize CellSize
 		{
 			get {
 				if (_image != null)
-					return new SizeF(base.CellSize.Width + 3 + _image.Size.Width, base.CellSize.Height);
+					return new CGSize(base.CellSize.Width + 3 + _image.Size.Width, base.CellSize.Height);
 				else
-					return new SizeF(base.CellSize.Width + 3, base.CellSize.Height);
+					return new CGSize(base.CellSize.Width + 3, base.CellSize.Height);
 			}
 		}
 
-		public override NSCellHit HitTest (NSEvent forEvent, RectangleF inRect, NSView ofView)
+		public override NSCellHit HitTest (NSEvent forEvent, CGRect inRect, NSView ofView)
 		{
-			PointF point = ofView.ConvertPointFromView (forEvent.LocationInWindow, null);
+			CGPoint point = ofView.ConvertPointFromView (forEvent.LocationInWindow, null);
 
 			if (_image != null) {
-				RectangleF imageFrame;
+                CGRect imageFrame;
 				inRect.Divide(3 + _image.Size.Width, CGRectEdge.MinXEdge, out imageFrame, out inRect);
 
 				imageFrame.X += 3;

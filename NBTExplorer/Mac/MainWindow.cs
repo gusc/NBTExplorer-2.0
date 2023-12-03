@@ -7,6 +7,7 @@ using AppKit;
 using NBTExplorer.Mac;
 using System.IO;
 using NBTExplorer.Model;
+using NBTModel.Interop;
 using Substrate.Nbt;
 using System.Threading;
 
@@ -702,14 +703,14 @@ namespace NBTExplorer
 
 		private static ModalResult RunWindow (NSWindowController controller)
 		{
-			int response = NSApplication.SharedApplication.RunModalForWindow (controller.Window);
+			nint response = NSApplication.SharedApplication.RunModalForWindow (controller.Window);
 			controller.Window.Close();
 			controller.Window.OrderOut(null);
 			
 			if (!Enum.IsDefined(typeof(ModalResult), response))
 				response = 0;
 			
-			return (ModalResult)response;
+			return (ModalResult)(int)response;
 		}
 
 		private CancelFindWindowController _searchForm;
@@ -861,7 +862,7 @@ namespace NBTExplorer
 		private bool ConfirmExit ()
 		{
 			if (CheckModifications()) {
-				int id = NSAlert.WithMessage("Unsaved Changes", "OK", "Cancel", "", "You currently have unsaved changes.  Close anyway?").RunModal();
+				nint id = NSAlert.WithMessage("Unsaved Changes", "OK", "Cancel", "", "You currently have unsaved changes.  Close anyway?").RunModal();
 				if (id != 1)
 					return false;
 			}
@@ -872,7 +873,7 @@ namespace NBTExplorer
 		private bool ConfirmOpen ()
 		{
 			if (CheckModifications()) {
-				int id = NSAlert.WithMessage("Unsaved Changes", "OK", "Cancel", "", "You currently have unsaved changes.  Open new location anyway?").RunModal();
+				nint id = NSAlert.WithMessage("Unsaved Changes", "OK", "Cancel", "", "You currently have unsaved changes.  Open new location anyway?").RunModal();
 				if (id != 1)
 					return false;
 			}
