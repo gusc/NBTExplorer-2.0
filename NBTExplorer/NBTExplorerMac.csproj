@@ -162,6 +162,57 @@
       <Name>Substrate (NET2)</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow-315.png" />
+    <BundleResource Include="Resources\block.png" />
+    <BundleResource Include="Resources\document-24.png" />
+    <BundleResource Include="Resources\document-attribute-b.png" />
+    <BundleResource Include="Resources\document-attribute-d.png" />
+    <BundleResource Include="Resources\document-attribute-f.png" />
+    <BundleResource Include="Resources\document-attribute-i.png" />
+    <BundleResource Include="Resources\document-attribute-l.png" />
+    <BundleResource Include="Resources\document-attribute-s.png" />
+    <BundleResource Include="Resources\document-b-24.png" />
+    <BundleResource Include="Resources\document-copy.png" />
+    <BundleResource Include="Resources\document-d-24.png" />
+    <BundleResource Include="Resources\document-f-24.png" />
+    <BundleResource Include="Resources\document-i-24.png" />
+    <BundleResource Include="Resources\document-l-24.png" />
+    <BundleResource Include="Resources\document-s-24.png" />
+    <BundleResource Include="Resources\edit-code-24.png" />
+    <BundleResource Include="Resources\edit-code-b.png" />
+    <BundleResource Include="Resources\edit-code-i-24.png" />
+    <BundleResource Include="Resources\edit-code-i.png" />
+    <BundleResource Include="Resources\edit-code-l.png" />
+    <BundleResource Include="Resources\edit-code-s.png" />
+    <BundleResource Include="Resources\edit-code.png" />
+    <BundleResource Include="Resources\edit-list-24.png" />
+    <BundleResource Include="Resources\edit-list.png" />
+    <BundleResource Include="Resources\edit-replace.png" />
+    <BundleResource Include="Resources\edit-small-caps.png" />
+    <BundleResource Include="Resources\folder-open-24.png" />
+    <BundleResource Include="Resources\folder-open-104.png" />
+    <BundleResource Include="Resources\folder-open-document-104.png" />
+    <BundleResource Include="Resources\folder-open-document.png" />
+    <BundleResource Include="Resources\folder-open.png" />
+    <BundleResource Include="Resources\icon-nbtexplorer-2.0.png" />
+    <BundleResource Include="Resources\sql-join-inner.png" />
+    <BundleResource Include="Resources\sql-join-outer.png" />
+    <BundleResource Include="Resources\wooden-box.png" />
+    <BundleResource Include="Resources\box-24.png" />
+    <BundleResource Include="Resources\box.png" />
+    <BundleResource Include="Resources\cross-24.png" />
+    <BundleResource Include="Resources\cross.png" />
+    <BundleResource Include="Resources\disk-24.png" />
+    <BundleResource Include="Resources\disk.png" />
+    <BundleResource Include="Resources\pencil-24.png" />
+    <BundleResource Include="Resources\pencil.png" />
+    <BundleResource Include="Resources\scissors-24.png" />
+    <BundleResource Include="Resources\scissors.png" />
+    <BundleResource Include="Resources\selection-input-24.png" />
+    <BundleResource Include="Resources\selection-input.png" />
+    <BundleResource Include="Resources\question-white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
