@@ -52,11 +52,9 @@ namespace NBTExplorer.Mac
 
 	[Adopts("NSCoding")]
 	[Adopts("NSPasteboardReading")]
-	[Adopts("NSPasteboardWriting")]
-	[Register("NbtClipboardDataMac")]
+	[Register("NbtClipboardDataMacReader")]
 	public class NbtClipboardDataMacReader : NSPasteboardReading
 	{
-		static AdoptsAttribute _writingProtocol = new AdoptsAttribute ("NSPasteboardWriting");
 		static AdoptsAttribute _readingProtocol = new AdoptsAttribute ("NSPasteboardReading");
 		static AdoptsAttribute _codingProtocol = new AdoptsAttribute("NSCoding");
 
@@ -98,8 +96,6 @@ namespace NBTExplorer.Mac
 
 			if (protocol == _readingProtocol.ProtocolHandle)
 				return true;
-			if (protocol == _writingProtocol.ProtocolHandle)
-				return true;
 			if (protocol == _codingProtocol.ProtocolHandle)
 				return true;
 			return base.ConformsToProtocol (protocol);
@@ -132,12 +128,14 @@ namespace NBTExplorer.Mac
 			coder.Encode (_data, "data");
 		}
 
-		public new string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard)
+        [Export("readableTypesForPasteboard:")]
+        public new static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard)
 		{
 			return new string[] { _pasteboardItemName };
 		}
 
-		public new NSPasteboardReadingOptions GetReadingOptionsForType (string type, NSPasteboard pasteboard)
+        [Export("readingOptionsForType:pasteboard:")]
+        public new static NSPasteboardReadingOptions GetReadingOptionsForType (string type, NSPasteboard pasteboard)
 		{
 			if (type == _pasteboardItemName)
 				return NSPasteboardReadingOptions.AsKeyedArchive;
@@ -165,13 +163,11 @@ namespace NBTExplorer.Mac
 	}
 
     [Adopts("NSCoding")]
-    [Adopts("NSPasteboardReading")]
     [Adopts("NSPasteboardWriting")]
-    [Register("NbtClipboardDataMac")]
+    [Register("NbtClipboardDataMacWriter")]
     public class NbtClipboardDataMacWriter : NSPasteboardWriting
     {
         static AdoptsAttribute _writingProtocol = new AdoptsAttribute("NSPasteboardWriting");
-        static AdoptsAttribute _readingProtocol = new AdoptsAttribute("NSPasteboardReading");
         static AdoptsAttribute _codingProtocol = new AdoptsAttribute("NSCoding");
 
         private static string _pasteboardItemName = "jaquadro.nbtexplorer.nbtClipboardDataMac";
@@ -211,8 +207,6 @@ namespace NBTExplorer.Mac
             if (_bypassProtocolCheck)
                 return true;
 
-            if (protocol == _readingProtocol.ProtocolHandle)
-                return true;
             if (protocol == _writingProtocol.ProtocolHandle)
                 return true;
             if (protocol == _codingProtocol.ProtocolHandle)
