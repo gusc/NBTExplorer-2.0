@@ -26,7 +26,7 @@ namespace NBTExplorer.Mac
 			controller.Window.Close();
 			controller.Window.OrderOut(null);
 
-			if (!Enum.IsDefined(typeof(ModalResult), response))
+			if (!Enum.IsDefined(typeof(ModalResult), (int)response))
 				response = 0;
 
 			return (ModalResult)(int)response;
