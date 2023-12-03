@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBTModel", "NBTModel\NBTMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate (NET2)", "..\Substrate\SubstrateCS\Substrate (NET2).csproj", "{AFE30E14-3F2F-4461-9F7D-147AB4DCA4C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBTExplorerMac", "NBTExplorer\NBTExplorerMac.csproj", "{01F9A296-C477-4CBF-A0D0-41E697048257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
@@ -113,6 +115,24 @@ Global
 		{AFE30E14-3F2F-4461-9F7D-147AB4DCA4C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AFE30E14-3F2F-4461-9F7D-147AB4DCA4C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{AFE30E14-3F2F-4461-9F7D-147AB4DCA4C3}.Release|x86.Build.0 = Release|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.AppStore|Mixed Platforms.ActiveCfg = AppStore|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.AppStore|Mixed Platforms.Build.0 = AppStore|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.AppStore|x86.ActiveCfg = AppStore|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.AppStore|x86.Build.0 = AppStore|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Debug|x86.Build.0 = Debug|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Release|x86.ActiveCfg = Release|Any CPU
+		{01F9A296-C477-4CBF-A0D0-41E697048257}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
