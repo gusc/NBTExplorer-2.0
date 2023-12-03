@@ -8,6 +8,7 @@
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
     <RootNamespace>NBTExplorerMac</RootNamespace>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseXamMacFullFramework>true</UseXamMacFullFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +30,7 @@
     <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
     <EnableCodeSigning>False</EnableCodeSigning>
     <AOTMode>All</AOTMode>
-    <XamMacArch>x86_64</XamMacArch>
+    <XamMacArch>x86_64,ARM64</XamMacArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,6 +57,7 @@
     </CustomCommands>
     <LinkMode>None</LinkMode>
     <HttpClientHandler></HttpClientHandler>
+    <XamMacArch>x86_64,ARM64</XamMacArch>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
